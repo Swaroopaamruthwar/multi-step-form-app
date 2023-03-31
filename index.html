@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+
+
+  <title>Multi-step form</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="sub-container">
+      <div class="left-container">
+        <div class="steps">
+          <div class="circle">
+            <div>1</div>
+          </div>
+          <div class="col">
+            <span class="first">Step 1</span>
+            <span class="second">Your info</span>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="circle">
+            <div>2</div>
+          </div>
+          <div>
+            <div class="col">
+              <span class="first">Step 2</span>
+              <span class="second">Select plan</span>
+            </div>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="circle">
+            <div>3</div>
+          </div>
+          <div>
+            <div class="col">
+              <span class="first">Step 3</span>
+              <span class="second"> Add-ons</span>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="steps">
+          <div class="circle">
+            <div>4</div>
+          </div>
+          <div>
+            <div class="col">
+              <span class="first">Step 4</span>
+              <span class="second">Summary</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="form">
+          <div class="form-container">
+            <h1> Personal info</h1>
+            <p>Please provide your name, email address, and phone number.</p>
+            <form>
+              <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="e.g. Stephen King">
+              </div>
+
+              <div>
+                <label for="email">Email Adress</label>
+                <input type="email" id="email" name="email" placeholder="e.g. stephenking@lorem.com">
+              </div>
+              <div>
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" name="phone" placeholder="e.g. +1 234 567 890">
+              </div>
+              <div>
+                <button class="btn">Next Step</button>
+              </div>
+            </form>
+          </div>
+          <div class="select-plan">
+            <h1>Select your plan</h1>
+            <p>You have the option of monthly or yearly billing.</p>
+            <div class="boxes">
+              <div class="box" onclick="selectBox(this)">
+                <div><img src="./assets/images/icon-arcade.svg" alt=""></div>
+                <div class="col">
+                  <span>Arcade</span>
+                  <span>$9/mo</span>
+                </div>
+              </div>
+              <div class="box" onclick="selectBox(this)">
+                <div><img src="./assets/images/icon-advanced.svg" alt=""></div>
+                <div class="col">
+                  <span>Advanced</span>
+                  <span>$12/mo</span>
+                </div>
+              </div>
+              <div class="box" onclick="selectBox(this)">
+                <div><img src="./assets/images/icon-arcade.svg" alt=""></div>
+                <div class="col">
+                  <span>Pro</span>
+                  <span>$15/mo</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan">
+              <div>Monthly</div>
+              <div class="toggle">
+                <span class="ball"></span>
+              </div>
+              <div>
+                Yearly
+              </div>
+            </div>
+
+            <div class="buttons">
+              <div>
+                <button class="left-btn btn">Go Back</button>
+              </div>
+              <div>
+                <button class="right-btn btn">Next Step</button>
+              </div>
+            </div>
+          </div>
+          <div class="pick-addons">
+            <h1>Pick add-ons</h1>
+            <p> Add-ons help enhance your gaming experience.</p>
+            <div>
+              <div class="select-addOns">
+                <div>
+                  <input type="checkbox" name="online-service" class="input-assumpte" id="online-service">
+                </div>
+                <div>
+                  <label for="online-service">
+                    <h3>Online Service</h3>
+                    <p>Access to multiplayer games</p>
+                  </label>
+                </div>
+                <div>
+                  <span> $1/mo</span>
+                </div>
+
+              </div>
+              <div class="select-addOns">
+                <div>
+                  <input type="checkbox" name="Larger storage" class="input-assumpte" id="larger-storage">
+                </div>
+                <div>
+                  <label for="larger-storage">
+                    <h3>Larger storage</h3>
+                    <p>Extra 1TB of cloud save</p>
+                  </label>
+                </div>
+                <div>
+                  <span>+$2/mo</span>
+                </div>
+
+              </div>
+              <div class="select-addOns">
+                <div>
+                  <input type="checkbox" name="Custom theme on your profile" class="input-assumpte"
+                    id="customizable-Profile">
+                </div>
+                <div>
+                  <label for="customizable-Profile">
+                    <h3>Customizable Profile</h3>
+                    <p>Custom theme on your profile</p>
+                  </label>
+
+                </div>
+                <div>
+                  <span>+$2/mo</span>
+                </div>
+
+              </div>
+            </div>
+            <div class="buttons">
+              <div>
+                <button class="left-btn btn">Go Back</button>
+              </div>
+              <div>
+                <button class="right-btn btn">Next Step</button>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="finishing-up">
+            <h1>Finishing up</h1>
+            <p> Double-check everything looks OK before confirming.</p>
+            <div class="d-flex">
+              <div class="flex-small">
+                <div>
+                  <div>Arcade(Monthly)</div>
+                  <div><a href="#">Change</a></div>
+                </div>
+                <div>
+                  S9/mo
+                </div>
+              </div>
+              <div class="flex-small">
+                <div>Online Service</div>
+                <div>+$1/mo</div>
+              </div>
+              <div class="flex-small">
+                <div>Larger Storage</div>
+                <div>+$2/mo</div>
+              </div>
+              <div class="flex-small">
+                <div>Total(per month)</div>
+                <div class="font">+$12/mo</div>
+              </div>
+
+            </div>
+            <div class="buttons">
+              <div>
+                <button class="left-btn btn">Go Back</button>
+              </div>
+              <div>
+                <button class="right-btn btn confirm">Confirm</button>
+              </div>
+            </div>
+          </div>
+          <div class="thankyou">
+            <div>
+              <img src="./assets/images/icon-thank-you.svg" alt="">
+            </div>
+            <div class="text">Thank you!</div>
+            <div class="last">
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free
+              to email us at support@loremgaming.com.
+            </div>
+          </div>
+        </div>
+        <div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts.js"></script>
+</body>
+
+</html>

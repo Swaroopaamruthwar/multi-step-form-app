@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  position: relative;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.sub-container {
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: row;
+}
+.left-container {
+  flex: 1 0 auto; /* flex-grow: 1, flex-shrink: 0, flex-basis: auto */
+  position: relative;
+  height: 100%;
+  width: 30%; /* set the initial width of the container */
+  background-image: url("./assets/images/bg-sidebar-desktop.svg");
+  background-size: cover; /* make the background image cover the entire container */
+  background-repeat: no-repeat; /* prevent the background image from repeating */
+  background-position: center; /* center the background image */
+  padding-top: 20px;
+  border-radius: 10px;
+}
+
+.right-container {
+  flex: 2 0 auto;
+  height: 100%;
+  width: 70%; /* set the initial width of the container */
+}
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px 0px;
+  padding-left: 20px;
+  align-items: center;
+}
+
+.steps div {
+  margin-right: 20px;
+}
+
+.circle {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  color: white;
+}
+
+.circle div {
+  margin: auto;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.col .first {
+  color: hsl(229, 24%, 87%);
+}
+.col .second {
+  color: white;
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  padding-left: 20px;
+}
+
+h1 {
+  color: hsl(213, 96%, 18%);
+}
+
+p {
+  color: hsl(231, 11%, 63%);
+}
+.form-container {
+  display: flex;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+
+label {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 80%;
+  height: 30px;
+}
+
+.form-container {
+  display: none;
+  position: relative;
+  color: hsl(213, 96%, 18%);
+}
+
+.btn {
+  padding: 10px 20px;
+  position: absolute;
+  background-color: hsl(213, 22%, 43%);
+  border: none;
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+  transition: background-color 0.1s linear;
+}
+.btn:hover {
+  background-color: hsl(214, 38%, 30%);
+}
+
+/* plan css */
+
+.select-plan {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.boxes {
+  display: flex;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.boxes .box {
+  flex-basis: 33%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid red;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid hsl(231, 11%, 63%);
+}
+
+.boxes .box:hover {
+  border-top: 1px solid hsla(213, 96%, 18%, 1);
+  border-left: 1px solid hsla(213, 96%, 18%, 1);
+  border-bottom: 1px solid hsla(213, 96%, 18%, 0.6);
+  border-right: 1px solid hsla(213, 96%, 18%, 0.6);
+}
+
+.plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: hsla(228, 100%, 84%, 0.2);
+}
+
+.plan div {
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.toggle {
+  width: 60px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+  position: relative;
+  background-color: hsl(213, 96%, 18%);
+}
+.toggle span {
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  left: 0;
+  background-color: hsl(0, 0%, 100%);
+}
+.toggle span.ball {
+  left: 50%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+  margin-top: 58px;
+  margin-right: 35px;
+  position: relative;
+}
+
+.buttons .left-btn {
+  left: 0px;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(231, 11%, 63%);
+}
+.buttons .right-btn {
+  position: absolute;
+  right: 0px;
+}
+
+/* add Ons */
+
+.pick-addons {
+  display: none;
+}
+.select-addOns {
+  display: flex;
+  border: 1px solid black;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 20px 0px 0px;
+  padding: 10px;
+  border-radius: 5px;
+  color: hsl(213, 96%, 18%);
+  border: 1px solid hsl(213, 96%, 18%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.select-addOns:hover {
+  background-color: hsla(228, 100%, 84%, 0.5);
+}
+#online-service,
+#larger-storage,
+#customizable-Profile {
+  width: 20px;
+  background-color: hsl(243, 100%, 62%);
+}
+/* CSS code for changing checkbox styles */
+
+input[type="checkbox"]:checked {
+  background-color: blue;
+}
+
+/* finishing-up */
+.finishing-up {
+  display: none;
+}
+
+.d-flex {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background-color: hsl(229, 24%, 87%);
+  border-radius: 10px;
+}
+
+.flex-small {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+}
+.flex-small:first-child {
+  border-bottom: 1px solid #ccc;
+}
+.flex-small:last-child {
+  background-color: hsl(217, 100%, 97%);
+  padding: 20px;
+}
+.font {
+  font-weight: 700;
+  font-size: 20px;
+  color: hsl(213, 96%, 18%);
+}
+
+.confirm {
+  background-color: hsl(221, 75%, 51%);
+}
+.confirm:hover {
+  background-color: hsl(221, 75%, 51%);
+  cursor: pointer;
+}
+
+/* thankyou */
+
+.thankyou {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 70px 10px;
+}
+.thankyou > div {
+  margin: 5px;
+}
+.text {
+  font-weight: 700;
+  font-size: 20px;
+}
+.last {
+  color: hsl(231, 11%, 63%);
+}
+
+.thankyou {
+  display: none;
+}
+
+.selected {
+  border: 1px solid #272424;
+  background-color: #ddd;
+}
+
+.box {
+  border: 1px solid #ddd !important;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
