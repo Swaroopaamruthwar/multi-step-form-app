@@ -227,9 +227,22 @@ input {
   background-color: hsl(0, 0%, 100%);
   color: hsl(231, 11%, 63%);
 }
+
+.left-btn:hover {
+  cursor: pointer;
+}
+
 .buttons .right-btn {
   position: absolute;
   right: 0px;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.right-btn {
+  cursor: pointer;
 }
 
 /* add Ons */
